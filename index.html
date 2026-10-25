@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Una carta para ti</title>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23c2456b' d='M12 21s-7.5-4.6-10-9.4C.2 8 2 4 5.8 4c2.2 0 3.7 1.2 4.7 2.7h3C14.5 5.2 16 4 18.2 4 22 4 23.8 8 22 11.6 19.5 16.4 12 21 12 21z'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
   --sky1:#1c1b4a;--sky2:#5b2a74;--sky3:#c2456b;--sky4:#f47d4f;--sky5:#ffc371;
@@ -53,13 +54,15 @@ button{font:inherit;font-size:1.3rem;font-weight:500;cursor:pointer;border:0;bor
 button:focus-visible{outline:3px solid #fff;outline-offset:3px}
 #open{margin-top:96px}
 
-.letter{position:absolute;width:min(92vw,460px);max-height:84vh;overflow:auto;background:var(--paper);border-radius:6px;
-  padding:34px 30px 28px;visibility:hidden;
-  background-image:repeating-linear-gradient(180deg,transparent 0 33px,rgba(150,90,80,.13) 33px 34px);
+.letter{position:absolute;width:min(92vw,580px);max-height:86vh;overflow:auto;background:var(--paper);border-radius:6px;
+  padding:34px clamp(22px,6vw,48px) 30px;visibility:hidden;
+  background-image:linear-gradient(90deg,transparent clamp(14px,4vw,34px),rgba(200,80,90,.35) clamp(14px,4vw,34px),rgba(200,80,90,.35) calc(clamp(14px,4vw,34px) + 1px),transparent calc(clamp(14px,4vw,34px) + 1px)),
+    repeating-linear-gradient(180deg,transparent 0 33px,rgba(150,90,80,.16) 33px 34px);
+  background-attachment:local;
   box-shadow:0 30px 70px rgba(40,10,50,.55)}
-.letter h2{font-family:'Caveat',cursive;font-size:2.2rem;margin:0 0 10px;color:var(--wine)}
-.letter p{font-size:1.28rem;line-height:34px;margin:0 0 4px}
-.sign{font-family:'Caveat',cursive;font-size:2rem;text-align:right;margin-top:14px;color:var(--wine)}
+.letter h2{font-family:'Great Vibes','Caveat',cursive;font-weight:400;font-size:clamp(2.2rem,8vw,2.9rem);line-height:68px;margin:0;color:var(--wine)}
+.letter p{font-family:'Caveat',cursive;font-weight:500;font-size:clamp(1.4rem,4.6vw,1.7rem);line-height:34px;margin:0 0 34px;color:#3d2228;text-align:left}
+.sign{font-family:'Great Vibes','Caveat',cursive;font-size:clamp(2rem,7vw,2.6rem);line-height:68px;text-align:right;margin:0;color:var(--wine)}
 .close{display:block;margin:18px auto 0;font-size:1.05rem;padding:9px 24px;background:var(--wine);color:#fff6dc;box-shadow:none}
 </style>
 </head>
@@ -77,7 +80,7 @@ button:focus-visible{outline:3px solid #fff;outline-offset:3px}
 
 <main class="stage">
   <section class="intro" id="intro">
-    <h1>Tengo algo para tu</h1>
+    <h1>Tengo algo para ti</h1>
     <p>Mientras el sol se despide, escribí unas palabras.</p>
     <div class="env" id="env" aria-hidden="true">
       <div class="body"></div><div class="front"></div>
@@ -87,11 +90,14 @@ button:focus-visible{outline:3px solid #fff;outline-offset:3px}
   </section>
 
   <article class="letter" id="letter" aria-live="polite">
-    <h2>Querido tú,</h2>
-    <p>Hoy el cielo se pintó de naranja y violeta, y me acordé de ti.</p>
-    <p>Quería decirte gracias por estar, por las risas y por los días tranquilos que hacen todo más bonito.</p>
-    <p>Ojalá cada atardecer te recuerde lo mucho que vales.</p>
-    <div class="sign">Con cariño</div>
+    <h2>Corazón</h2>
+    <p>esta es la continuación de la anterior carta. Esta es la más importante porque es el día de tu cumpleaños. Seguro alguna vez, cuando me dijiste qué día cumplías, pensabas que se me iba a olvidar, pero no, siempre lo recordé.</p>
+    <p>Andrea, el destino y la vida quisieron que te conociera. Entré a la empresa con una misión en mente, y era no encariñarme con nadie, pero fuiste esa piedra que me hizo volver a confiar, y pude creer en ti.</p>
+    <p>Siempre están en mi mente las veces que me celabas, cuando no me hablabas porque no te saludaba primero, cuando tenía que abrazarte para que me perdonaras. Esa primera carta que recibí, sin haberte dicho que es el mejor regalo que me pudieran dar.</p>
+    <p>Siempre estuvo en mí esa duda y esa intriga de que, cuando salieras, me dejarías de hablar (que te pierdes más que quién sabe, pero ajá). Y ese miedo era porque para mí eres importante, y siempre lo serás. No depende de mí, depende de ti que siempre me quieras en tu vida, tu amigo el cantante, jajajajaja.</p>
+    <p>Creo que sobran las palabras, porque con mis acciones he demostrado lo importante que te volviste.</p>
+    <p>Hoy el cielo se pintó de naranja y violeta, y me acordé de ti. Quería decirte gracias por estar, por las risas y por los días tranquilos que hacen todo más bonito. Ojalá cada atardecer te recuerde lo mucho que vales.</p>
+    <div class="sign">Con cariño, Tu gran amigo Antoni</div>
     <button class="close" id="close">Guardar la carta</button>
   </article>
 </main>
